@@ -1,8 +1,8 @@
 import psutil
 import time
 
-threshold = 80  # Set your desired CPU usage threshold in %
-int_time = 5    # Check every 5 second
+threshold = 80  #Setting up the CPU threshold to 80%.
+int_time = 5   #Setting interval to 5 secs.
 
 print("Monitoring CPU usage...")
 
@@ -14,4 +14,5 @@ try:
 except KeyboardInterrupt:
     print("\nMonitoring stopped by user.")
 except Exception as e:
+
     print(f"An error occurred: {e}")
