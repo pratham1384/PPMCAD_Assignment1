@@ -11,7 +11,6 @@ def check_password_strength(password):
     if not has_upper:
         return False
     
-
     has_lower = False
     for char in password:
         if char.islower():
@@ -20,7 +19,6 @@ def check_password_strength(password):
     if not has_lower:
         return False
     
- 
     has_digit = False
     for char in password:
         if char.isdigit():
@@ -29,7 +27,6 @@ def check_password_strength(password):
     if not has_digit:
         return False
     
-    # Check for special character
     special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
     has_special = False
     for char in password:
@@ -38,7 +35,7 @@ def check_password_strength(password):
             break
     if not has_special:
         return False
-    # If all checks pass, password is strong
+    
     return True
 
 print("Password Requirements:")
@@ -56,4 +53,5 @@ password = input("Enter password: ")
 if check_password_strength(password):
     print("This is a strong password!")
 else:
+
     print("The password is weak, please try again!")
